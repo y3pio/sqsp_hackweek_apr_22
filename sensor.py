@@ -21,6 +21,8 @@ GPIO.add_event_detect(LASER_PIN_BLUE, GPIO.FALLING, bouncetime=PIN_IN_DEBOUNCE)
 
 customer_count = 0
 
+print("\n Sensor ready... \n")
+
 try:
 	while True:
 		# print("%s - %s | Count: %2d" % (GREEN_TIME, BLUE_TIME, customer_count))
@@ -47,7 +49,7 @@ try:
 				customer_count-=1
 				firebase_io.update_firebase(-1)
 
-			sleep(1.75)
+			sleep(1.35)
 
 			GREEN_TIME = None
 			BLUE_TIME = None
