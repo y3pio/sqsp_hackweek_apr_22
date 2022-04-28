@@ -3,8 +3,10 @@ html {
 }
 
 body {
+	margin:  0;
 	height:  100vh;
 }
+
 #output {
 	font-size: 10em;
 	display: flex;
